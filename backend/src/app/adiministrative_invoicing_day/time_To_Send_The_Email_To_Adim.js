@@ -13,8 +13,8 @@ class timeToSendEmail {
         };
         
         await schedule.scheduleJob({
-            hour: 10,
-            minute: 16,
+            hour: 0,
+            minute: 0,
             dayOfWeek: [0, new schedule.Range(0,6)]
         }, async function() { 
             await sendEmail(alldata), 

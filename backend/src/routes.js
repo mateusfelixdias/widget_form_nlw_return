@@ -2,7 +2,6 @@ const all = require('./app/adiministrative_products/all_products');
 const deleta = require('./app/adiministrative_products/deleting_product');
 const insert = require('./app/adiministrative_products/adding _product');
 const update = require('./app/adiministrative_products/update_product');
-//const pedido = require('./app/day_and_month_billing/monthlyBilling');
 const pedido = require('./app/day_and_month_billing/billingOfTheDay');
 const routes = require('express').Router();
 
