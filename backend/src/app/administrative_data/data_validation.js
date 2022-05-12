@@ -6,11 +6,11 @@ class data_validation {
     async data_validation (request){
         const { nome, preço } = request;
 
-        if(!nome){
-            return `he name is invalid, try again.`
+        if(!nome || !isNaN(nome)){
+            return `he product is invalid, try again.`
         };
         
-        if(!preço){
+        if(!preço || isNaN(preço)){
             return `ha price is invalid, try again.`
         };
         
