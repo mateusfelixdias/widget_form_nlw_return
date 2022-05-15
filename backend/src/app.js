@@ -2,7 +2,7 @@ const body_parser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
 const routes = require('./routes');
-require('./app/adiministrative_invoicing_day/time_To_Send_The_Email_To_Adim').timeToSendEmail();
+require('./adiministrative_invoicing_day/time_To_Send_The_Email_To_Adim')();
 
 
 class config {
