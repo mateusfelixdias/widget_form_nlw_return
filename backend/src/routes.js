@@ -1,10 +1,10 @@
 const routes = require('express').Router();
 
-const all = require('./adiministrativeProducts/allProducts');
-const deleta = require('./adiministrativeProducts/deletingProduct');
-const insert = require('./adiministrativeProducts/addingProduct');
-const update = require('./adiministrativeProducts/updateProduct');
-const request = require('./dayAndMonthBilling/billingOfTheDay');
+const all = require('./BakeryProducts/adiministrativeProducts/allProducts');
+const deleta = require('./BakeryProducts/adiministrativeProducts/deletingProduct');
+const insert = require('./BakeryProducts/adiministrativeProducts/addingProduct');
+const update = require('./BakeryProducts/adiministrativeProducts/updateProduct');
+const request = require('./InvoicingBakery/dayAndMonthBilling/billingOfTheDay');
 
 routes.post('/insert', insert.addingProduct);
 routes.post('/pedido', request.billingDay);

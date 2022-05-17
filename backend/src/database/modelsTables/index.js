@@ -20,9 +20,12 @@ fs
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     const modeltwo = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     const modelthree = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const modelfour = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
     db[modeltwo.name] = modeltwo;
     db[modelthree.name] = modelthree;
+    db[modelthree.name] = modelfour;
+    
   });
 
 
