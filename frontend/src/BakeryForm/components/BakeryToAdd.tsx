@@ -37,7 +37,7 @@ export function BakeryToAdd (){
               name="preço" required onChange={(data) => setPreço(data.target.value)} value={ preço } 
               className="rounded flex flex-col ml-2 items-center text-2xl pt-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus-ring-brand-300 transsition-colors xs:w-[250px]"
             />
-          <span className="p-1 rounded-md flex-1 flex ml-2 justify-center items-center text-2xl mt-16 bg-blue-100 hover:bg-brand-300 w-[364px] xs:w-[250px]" 
+          <span className="p-1 rounded flex-1 flex ml-2 justify-center items-center text-2xl mt-16 bg-blue-100 hover:bg-brand-300 w-[364px] xs:w-[250px]" 
             onClick={ handleSumitproduct }> <button> { eventButton ? <Loading />: 'Adicionar produto' }</button></span>
         </form>
       </section>
