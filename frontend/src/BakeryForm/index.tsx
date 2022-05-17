@@ -3,7 +3,7 @@ import { BakeryToAdd } from "./components/BakeryToAdd";
 export function Bakery (){
   return ( 
     <>
-      <header className="items-center flex flex-col mt-8 xs:w-[400px]" ></header>
+      <header className="items-center flex flex-col mt-8 xs:w-[400px]" >welcome to the bakery.</header>
 
       <main className="h-96 flex flex-col rounded items-center">
         <BakeryToAdd/>
