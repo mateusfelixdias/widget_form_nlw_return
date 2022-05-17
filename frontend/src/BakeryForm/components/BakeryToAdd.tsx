@@ -26,7 +26,7 @@ export function BakeryToAdd (){
 
 
   return (
-      <section className="bg-[#066483] w-96 h-96 rounded xs:w-[266px]">
+      <section className="bg-[#066483] w-[380px] h-96 rounded xs:w-[266px]">
         <form>
           <span className="text-3xl flex flex-col items-center mt-8">Protudo:</span>
             <input type="text" name="nome" required value={ nome } onChange={(data) => setNome(data.target.value)}
