@@ -4,20 +4,20 @@ const { produto } = require('../../database/modelsTables');
 class monthlyBilling {
     async monthly_Billing (req, res){
         const current_billing = await faturamento.findOne(
-            { where: { nome: req.body.nome } }
+            { where: { name: req.body.name } }
         );
 
         const price_of_the_product = await produto.findOne(
-            { where: { nome: req.body.nome } }
+            { where: { name: req.body.name } }
         );
 
         const billingUpdate = { 
-            billing: current_billing.faturamento + price_of_the_product.preço 
+            billing: current_billing.faturamento + price_of_the_product.price 
         };
 
         const path = {
             value: { faturamento: billingUpdate.billing },
-            where: { where: { nome: req.body.nome } },
+            where: { where: { name: req.body.name } },
             multi: { multi: true }
         };
 
@@ -28,17 +28,12 @@ class monthlyBilling {
             () => {{}});
 
         if(updatebilling === 0){
-            res.json({
-                massage: `hears failure to update billing.`
-            }).send();
+            res.send(`hears failure to update billing.`);
         };
 
-        res.json({
-            massage: `billing updated successfully.`
-        }).send();
+        res.send(`billing updated successfully.`);
     };
 };
 
 
 module.exports = new monthlyBilling();
-

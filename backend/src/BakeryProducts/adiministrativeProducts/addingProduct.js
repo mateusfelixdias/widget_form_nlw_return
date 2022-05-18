@@ -5,25 +5,25 @@ const { produto } = require('../../database/modelsTables');
 
 class adding_product {
     async addingProduct (req, res){
-        const { nome, preço } = req.body;
+        const { name, price } = req.body;
 
-        const validation = await productValidation({ nome, preço });
+        const validation = await productValidation({ name, price });
 
         if(typeof validation === 'object'){
             await faturamentoday.create({
-                nome: validation.nome,
-                total: 0,
+                name: validation.name,
+                vendidos: 0,
                 faturamentoday: 0
             });
 
             await faturamento.create({
-                nome: validation.nome,
+                name: validation.name,
                 faturamento: 0
             });
 
             await produto.create({
-                nome: validation.nome,
-                preço: validation.preço
+                name: validation.name,
+                price: validation.price
         });
 
         res.send('Cadastro concluido com sucesso.')

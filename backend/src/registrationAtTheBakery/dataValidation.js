@@ -1,4 +1,4 @@
-const { user } = require('../database/modelsTables');
+const { gerente } = require('../database/modelsTables');
 const yup = require('yup');
 
 
@@ -22,7 +22,7 @@ class Validation {
         if( !isValid ) { return 'Erro, dados inválidos.' };
 
 
-        const EmailAlreadyRegistered = await user.findOne({ 
+        const EmailAlreadyRegistered = await gerente.findOne({ 
             where: { email: email } 
         });
 
@@ -34,5 +34,6 @@ class Validation {
 
     };
 };
+
 
 module.exports = new Validation().dataValidation;

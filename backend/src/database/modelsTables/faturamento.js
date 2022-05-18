@@ -1,6 +1,6 @@
 module.exports = function (Sequelize, DataTypes) {
     const faturamento = Sequelize.define('faturamento', {
-        nome: DataTypes.STRING,
+        name: DataTypes.STRING,
         faturamento: DataTypes.FLOAT
     });
 

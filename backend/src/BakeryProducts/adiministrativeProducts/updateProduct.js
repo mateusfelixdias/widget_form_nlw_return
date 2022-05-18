@@ -5,9 +5,9 @@ const { produto } = require('../../database/modelsTables');
 class update_product {
     async updateProduct(req, res){
         const path  = { 
-            name: { nome: req.body.nome },
+            name: { nome: req.body.name },
             multi: { multi: true },
-            where: { where: { nome: req.params.nome } }
+            where: { where: { nome: req.params.name } }
         };
 
         const product_update = await produto.update(

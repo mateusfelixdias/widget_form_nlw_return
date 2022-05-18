@@ -4,16 +4,16 @@ const dataValidationTest = require('../registrationAtTheBakery/dataValidation');
 describe(`test on product registration`, () => {
     it(`should give an error if the name or price is invalid.`, async () => {
         await expect(productValidationTest({
-            nome: '', 
-            preço: 9.00
+            name: '', 
+            price: 9.00
         })).resolves.toBe(`he product is invalid, try again.`);
     });
 
 
     it(`should give an error if the product is already registered.`, async () => {
         await expect(productValidationTest({
-            nome: 'Pão',
-            preço: 12.00
+            name: 'Pão',
+            price: 12.00
         })).resolves.toBe(`the product is already registered.`);
     });
 });

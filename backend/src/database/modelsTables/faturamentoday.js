@@ -1,7 +1,7 @@
 module.exports = function (Sequelize, DataTypes) {
     const faturamentoday = Sequelize.define('faturamentoday', {
-        nome:  DataTypes.STRING,
-        total: DataTypes.INTEGER,
+        name:  DataTypes.STRING,
+        vendidos: DataTypes.INTEGER,
         faturamentoday: DataTypes.FLOAT,
     });
 

@@ -4,16 +4,16 @@ const { produto } = require('../../database/modelsTables');
 class billingOfTheDay {
     async billingDay(req, res) {
         const current_day_billing = await faturamentoday.findOne(
-            { where: { nome: req.body.nome } }
+            { where: { name: req.body.name } }
         );
 
         const price_of_the_product = await produto.findOne(
-            { where: { nome: req.body.nome } }
+            { where: { name: req.body.name } }
         );
 
         const update_day_billing = { 
-            billing_day: current_day_billing.faturamentoday + price_of_the_product.preço, 
-            total_products_sold_on_the_day: current_day_billing.total + 1
+            billing_day: current_day_billing.faturamentoday + price_of_the_product.price, 
+            total_products_sold_on_the_day: current_day_billing.vendidos + 1
         };
 
         const path = {
@@ -21,7 +21,7 @@ class billingOfTheDay {
                 faturamentoday: update_day_billing.billing_day,
                 total: update_day_billing.total_products_sold_on_the_day 
             },
-            where: { where: { nome: req.body.nome } },
+            where: { where: { name: req.body.name } },
             multi: { multi: true }
         };
 
@@ -32,14 +32,11 @@ class billingOfTheDay {
             () => {{}});
 
         if(updateDayBilling === 0){
-            res.json({
-                massage: `there was a failure to update the day's billing.`
-            }).send();
+            res.send(`there was a failure to update the day's billing.`);
+
         };
 
-        res.json({
-            massage: `day billing updated successfully.`
-        }).send();
+        res.json(`day billing updated successfully.`);
     };
 };
 

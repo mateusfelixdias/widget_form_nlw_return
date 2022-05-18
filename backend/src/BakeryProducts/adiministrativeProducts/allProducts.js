@@ -6,7 +6,7 @@ class all_product {
         
         const allProducts = await products.map(element => {
             return (
-                `Produto: ${element.nome}: Preço: ${element.preço}.`
+                `Produto: ${element.name}: Preço: ${element.price}.`
             );
         });
 

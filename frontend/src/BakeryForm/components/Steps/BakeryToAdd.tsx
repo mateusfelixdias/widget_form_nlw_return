@@ -4,8 +4,8 @@ import { Loading } from '../Loading';
 
 
 export function BakeryToAdd (){
-  const [ nome, setNome ] = useState('');
-  const [ preço, setPreço ] = useState('');
+  const [ name, setName ] = useState('');
+  const [ price, setPrice ] = useState('');
   const [ eventButton, seteventbeButton ] = useState(false);
 
 
@@ -14,12 +14,12 @@ export function BakeryToAdd (){
       seteventbeButton(true);
     
       const insert = await api.post('/insert', {
-        nome,
-        preço
+        name,
+        price
       }); 
 
-      setPreço(''); 
-      setNome('');
+      setName('');
+      setPrice(''); 
       seteventbeButton(false);
       window.alert(insert.data);
   };
@@ -32,14 +32,14 @@ export function BakeryToAdd (){
 
           <span className="text-3xl flex flex-col items-center mt-8">Protudo:</span>
 
-            <input type="text" name="nome" required placeholder="Pão..." value={ nome } onChange={(data) => setNome(data.target.value)}
+            <input type="text" name="nome" required placeholder="Pão..." value={ name } onChange={(data) => setName(data.target.value)}
               className="rounded flex-col flex ml-2 w-[364px] items-center text-1xl pt-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus-ring-brand-300 transsition-colors xs:w-[250px]"
           />
 
           <span className="text-3xl flex flex-col items-center mt-8">Preço:</span>
 
             <input type="text" 
-              name="preço" required placeholder="1.90..." onChange={(data) => setPreço(data.target.value)} value={ preço } 
+              name="preço" required placeholder="1.90..." onChange={(data) => setPrice(data.target.value)} value={ price } 
               className="rounded flex flex-col ml-2 w-[364px] items-center text-1xl pt-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus-ring-brand-300 transsition-colors xs:w-[250px]"
             />
 

@@ -1,7 +1,7 @@
 module.exports = function (Sequelize, DataTypes) {
     const produto = Sequelize.define('produto', {
-        nome: DataTypes.STRING,
-        preço: DataTypes.FLOAT
+        name: DataTypes.STRING,
+        price: DataTypes.FLOAT
     });
 
     return produto;
