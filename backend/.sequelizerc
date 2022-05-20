@@ -1,0 +1,7 @@
+const path = require('path');
+
+module.exports = {
+    models_tables: path.resolve('src', 'database', 'modelsTables'),
+    config: path.resolve('src', 'database', 'config'),
+    migrations: path.resolve('src', 'database', 'migrations')
+};
