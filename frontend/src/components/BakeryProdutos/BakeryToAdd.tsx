@@ -4,8 +4,9 @@ import { Loading } from '../Loading';
 
 
 export function BakeryToAdd (){
-  const [ name, setName ] = useState('');
-  const [ price, setPrice ] = useState('');
+
+  const [ name, setName ] = useState<string>('');
+  const [ price, setPrice ] = useState<string>('');
   const [ eventButton, seteventbeButton ] = useState(false);
 
 
@@ -21,7 +22,13 @@ export function BakeryToAdd (){
 
       setName('');
       setPrice(''); 
-      seteventbeButton(false);
+
+
+      setTimeout(() => {(
+        seteventbeButton(false),
+        window.alert(insert.data)
+      )}, 2000);
+      
   };
 
 
