@@ -1,2 +1,2 @@
-# npm i: instalar as dependências.
-# npm run dev: inicia o projeto.
+# npm i: Instalar as dependências.
+# npm run dev: Inicia o projeto.
