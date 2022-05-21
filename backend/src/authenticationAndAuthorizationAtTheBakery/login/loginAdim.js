@@ -3,8 +3,8 @@ const token = require('../token/tokenAdim/token');
 
 
 class Login {
-    async loginAdim (req, res, next){
-        const { email, password } = req.body || req;
+    async loginAdim ( req, res ){
+        const { email, password } = req.body;
 
         const validation = await validationData( { email, password } );
 
@@ -12,13 +12,13 @@ class Login {
             const tokenAdim = await token( { id: validation.id } ) ;
 
             if(typeof tokenAdim === 'object'){
-                res.send(true);
+                res.send(tokenAdim);
 
             }else{
                 res.send(tokenAdim);
             };
         }else{
-            return res.send(validation);
+            res.send(validation);
 
         };
     };

@@ -22,7 +22,7 @@ class Token {
             const decoded = await promisify( jwt.verify )(token, config.secret);
 
             if(decoded){
-                return { massage: 'sucess' };
+                return token;
             }else{
                 return 'token Inválido.'
 
