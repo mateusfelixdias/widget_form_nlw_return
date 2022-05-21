@@ -1,5 +1,7 @@
 const routes = require('express').Router();
 
+const passport = require('./passport/passport')();
+
 //Controle de produtos: O administrador pode adicionar, atualizar, deleta, Ver todos os produtos cadastrados!
 const all = require('./BakeryProducts/adiministrativeProducts/allProducts');
 const deleta = require('./BakeryProducts/adiministrativeProducts/deletingProduct');
@@ -8,7 +10,7 @@ const update = require('./BakeryProducts/adiministrativeProducts/updateProduct')
 //Rotas.
 routes.post('/insert', insert.addingProduct);
 routes.put('/update/:nome', update.updateProduct);
-routes.get('/all', all.allProducts);
+routes.get('/all', all.allProducts).all(passport.authenticase());;
 routes.delete('/delete/:nome', deleta.deleteProduct);
 
 
