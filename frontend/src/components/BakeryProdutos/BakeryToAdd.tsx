@@ -28,7 +28,7 @@ export function BakeryToAdd (){
         seteventbeButton(false),
         window.alert(insert.data)
       )}, 2000);
-      
+
   };
 
 

@@ -1,6 +1,5 @@
 import { BakeryToAdd } from "./BakeryToAdd";
 
-
 export function BakeryAdd (){
   return ( 
     <>
