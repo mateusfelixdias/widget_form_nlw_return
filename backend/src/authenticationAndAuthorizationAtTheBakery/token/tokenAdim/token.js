@@ -2,27 +2,30 @@ const config = require('../config/config');
 const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 
-
 class Token {
     async token(request) {
-        const { id } = request;
+        const { id, email } = request;
 
-        const token = await jwt.sign(
-            { id: id },
+        const Authorization = await jwt.sign(
+            { id: id,
+              email: email
+            },
             config.secret,
             { expiresIn: config.expiresIn }
         );
 
-        if(!token){
+        if(!Authorization){
             return 'token vazio.';
         };
 
+        const token = Authorization;
 
         try {
             const decoded = await promisify( jwt.verify )(token, config.secret);
 
             if(decoded){
-                return token;
+                return { sucess: 'sucess' };
+
             }else{
                 return 'token Inválido.'
 
@@ -36,4 +39,3 @@ class Token {
 };
 
 module.exports = new Token().token;
-
