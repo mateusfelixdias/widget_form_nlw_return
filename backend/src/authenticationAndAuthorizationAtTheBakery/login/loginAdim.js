@@ -1,6 +1,6 @@
 const validationData = require('../validationLogin/validationLoginAdim');
 const { gerente } = require('../../database/modelsTables');
-const token = require('../token/tokenAdim/token');
+const token = require('../mainAuthorization/token/tokenAdim');
 
 
 class Login {
@@ -12,15 +12,13 @@ class Login {
 
 
         if(typeof validation === 'object'){
+
             const tokenAdim = await token( { id: validation.id, email } );
 
-
             if(typeof tokenAdim === 'object'){
-                const [ , tokenAlreadyValidated ] = await req.headers.authorization.split(' ');
-
-
+                
                 const path = {
-                    token: { token: tokenAlreadyValidated }, 
+                    token: { token: tokenAdim.token }, 
                     multi: { multi: true },
                     where: { where: { email: email } },
                 };
@@ -32,14 +30,14 @@ class Login {
                     () => {{}}
                 );
 
-                res.send(newToken[0] === 1 ? true : false );
+                return res.send( newToken[0] === 1 ? true : false );
 
             }else{
-                res.send( tokenAdim );
+                return res.send( tokenAdim );
 
             };
         }else{
-            res.send( validation );
+            return res.send( validation );
 
         };
     };

@@ -2,7 +2,6 @@ const bcryptjs = require('bcryptjs');
 const { gerente } = require('../../database/modelsTables');
 const yup = require('yup');
 
-
 class Validation {
 
     async validationData (request){
