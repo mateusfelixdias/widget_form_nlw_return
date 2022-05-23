@@ -1,7 +1,6 @@
-const productValidationTest = require('../BakeryProducts/ProductValidation/productValidation');
 const dataValidationTest = require('../registrationAtTheBakery/dataValidation/dataValidationCliente');
 const loginAdim = require('../authenticationAndAuthorizationAtTheBakery/login/loginAdim').loginAdim;
-
+const productValidationTest = require('../BakeryProducts/ProductValidation/productValidation');
 
 describe(`test on product registration`, () => {
     it(`should give an error if the name or price is invalid.`, async () => {
