@@ -27,13 +27,13 @@ export function BakeryLoginAdim (){
         
 
         if ( auth.data !== true ){ 
-            setTimeout(() => ( 
+            await setTimeout(() => ( 
                 seteventbeButton(false), 
                 window.alert( auth.data )), 2000
             );
 
         }else{
-            setTimeout(() => ( 
+            await setTimeout(() => ( 
                 navigate('/insert'), 
                 window.alert('Login concedido com sucesso.')), 2000
             );
