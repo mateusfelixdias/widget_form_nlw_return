@@ -8,4 +8,4 @@ instalar as depedências.
 Executa o projeto no local: http://localhost:3000
 
 # agradecimentos.
-<h1>@rocketseat.com</h1>
+<h3>@rocketseat.com</h3>
