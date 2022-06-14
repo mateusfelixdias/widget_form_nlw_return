@@ -1,2 +1,11 @@
-# npm i: Instalar as dependências.
-# npm run dev: Inicia o projeto.
+# Introdução ao vite.
+Este projeto foi inicializado com <a href="https://vitejs.dev/guide/">Vite.</a>
+
+# npm i
+instalar as depedências.
+
+# npm run dev
+Executa o projeto no local: http://localhost:3000
+
+# agradecimentos.
+<a href="/">@rocketseat</a>
