@@ -6,7 +6,7 @@ import { useState } from "react";
 interface ScreenshotButtonProps {
   screenshot: string | null;
   onScreenshotTook: (screenshot: string | null) => void;
-}
+};
 
 export function ScreenshotButton({ screenshot, onScreenshotTook }: ScreenshotButtonProps) {
   

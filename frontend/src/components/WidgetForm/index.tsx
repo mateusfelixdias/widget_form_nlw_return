@@ -6,7 +6,6 @@ import { FeedbackTypeStep } from "./Steps/FeedbackTypesStep";
 import { useState } from "react";
 import Thought from "../../image/Thought.png"
 
-
 export const feedbackTypes = {
     BUG: {
        image: {
