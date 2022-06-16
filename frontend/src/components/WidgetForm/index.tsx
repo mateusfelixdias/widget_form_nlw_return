@@ -30,7 +30,6 @@ export const feedbackTypes = {
     }
 };
 
-
 export type FeedbackType = keyof typeof feedbackTypes;
 
 export function Widgetform() {
@@ -62,7 +61,7 @@ export function Widgetform() {
                     </>
                 )}
             <footer className="text-xs text-neutral-400">
-                Ferito Com Carinho Pelo <a className="underline underline-offset-2 text-blue-200" href="https://github.com/mateusfelixdias/widget_form_nlw_return">Mateus Felix.</a>
+                Feito Com Carinho Pelo <a className="underline underline-offset-2 text-blue-200" href="https://github.com/mateusfelixdias/widget_form_nlw_return">Mateus Felix.</a>
             </footer>  
         </div>
     );
