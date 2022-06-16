@@ -1,4 +1,5 @@
 import { CloseButtom } from "../../CloseButtom";
+import Sucess from "../../../image/Sucess.png";
 
 interface FeedbackSuccessStepProps {
     onFeedbackRestarRequested: () => void;
@@ -16,9 +17,10 @@ export function FeedbackSuccessStep(
 
             <div className="flex flex-col items-center py-10 w-[304px]">
 
-                <span>
-                    Agradecemos o Feedback :)
+                <span className="pt-2">
+                    Agradecemos o Feedback.
                 </span>
+                <img src={Sucess} alt="Secesso." />
 
                 <button
                 type="button"
