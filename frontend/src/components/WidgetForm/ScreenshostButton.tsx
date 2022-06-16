@@ -41,6 +41,7 @@ export function ScreenshotButton({ screenshot, onScreenshotTook }: ScreenshotBut
     )
   };
 
+  
   return (
     <button
       type="button"
