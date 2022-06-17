@@ -32,7 +32,7 @@ export function ScreenshotButton({ screenshot, onScreenshotTook }: ScreenshotBut
           {
             backgroundImage: `url(${screenshot})`,
             backgroundPosition: 'right-bottom',
-            backgroundSize: 180
+            backgroundSize: 180,
           }
         }
       >

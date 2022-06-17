@@ -28,12 +28,12 @@ export function FeedbackContentStep({
 
     setIsSendFeedback(true);
 
-    const feedback = await api.post("/feedbacks", {
+    await api.post("/feedbacks", {
       type: feedbackType,
       comment,
+      screenshot
     });
 
-    console.log(feedback.data);
     setIsSendFeedback(false);
     onFeedbackSent();
   };
