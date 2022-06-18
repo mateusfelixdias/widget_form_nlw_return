@@ -2,9 +2,9 @@
 Este projeto foi inicializado com <a href="https://vitejs.dev/guide/">Vite.</a>
 
 # hospedagem.
-O frontend foi foi hospedagem na <a href="https://vercel.com/">Vercel.</a>
+O frontend foi hospedado na: <a href="https://vercel.com/">Vercel.</a>
 
-O backend vou hospedar na <a href="https://railway.app/">Railway.</a>
+O backend vou hospedar na: <a href="https://railway.app/">Railway.</a>
 
 # acesse o app.
 <a href="https://widget-form-nlw-return-qfeh0acd6-mateusfelixdias.vercel.app/">Widget Form Nlw Return.</a>
