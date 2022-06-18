@@ -7,7 +7,7 @@ O frontend foi hospedado na: <a href="https://vercel.com/">Vercel.</a>
 O backend vou hospedar na: <a href="https://railway.app/">Railway.</a>
 
 # acesse o app.
-<a href="https://widget-form-nlw-return-qfeh0acd6-mateusfelixdias.vercel.app/">Widget-Form-Nlw-Return. &#x1F603</a>
+<a href="https://widget-form-nlw-return-qfeh0acd6-mateusfelixdias.vercel.app/">Widget-Form-Nlw-Return. &#x1F603;</a>
 
 # npm i
 instalar as depedências.
