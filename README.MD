@@ -10,10 +10,11 @@ O backend vou hospedar na: <a href="https://railway.app/">Railway.</a>
 
 <a href="https://widget-form-nlw-return-qfeh0acd6-mateusfelixdias.vercel.app/">Widget-Form-Nlw-Return.</a>
 
-# npm i
+# Caso você queira o projeto em seu ambiente de desenvolvimento.
+<h2>npm i</h2>
 instalar as depedências.
 
-# npm run dev
+<h2>npm run dev</h2>
 Executa o projeto no local: http://localhost:3000
 
 # agradecimentos.
