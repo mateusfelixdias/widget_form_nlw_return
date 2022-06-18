@@ -28,11 +28,17 @@ export function FeedbackContentStep({
 
     setIsSendFeedback(true);
 
-    await api.post("/feedbacks", {
-      type: feedbackType,
+    // await api.post("/feedbacks", {
+    //   type: feedbackType,
+    //   comment,
+    //   screenshot
+    // });
+
+    console.log(
+      feedbackType,
       comment,
       screenshot
-    });
+    );
 
     setIsSendFeedback(false);
     onFeedbackSent();
@@ -57,8 +63,8 @@ export function FeedbackContentStep({
       </header>
 
       <form onSubmit={handleSumitFeedback} className="my-4 w-full">
-        <textarea
-          className="min-w-[384px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
+      <textarea
+          className="min-w-[384px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 ring-1 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-2 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin mobile:min-w-[50px]"
           placeholder="Conte com detelhes o que está acontecendo..."
           onChange={(event) => setComment(event.target.value)}
         ></textarea>

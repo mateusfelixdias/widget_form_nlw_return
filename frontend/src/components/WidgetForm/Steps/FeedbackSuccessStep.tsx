@@ -11,7 +11,7 @@ export function FeedbackSuccessStep(
     FeedbackSuccessStepProps){
     return (
         <>
-            <header>
+            <header className="flex flex-col items-center">
                 <CloseButtom />
             </header>
 
