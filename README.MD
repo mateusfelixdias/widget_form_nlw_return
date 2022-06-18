@@ -6,7 +6,7 @@ O frontend foi hospedado na: <a href="https://vercel.com/">Vercel.</a>
 
 O backend vou hospedar na: <a href="https://railway.app/">Railway.</a>
 
-Você pode acessar o app logo abaixo &#x1F603;.</br>
+Você pode acessar o app logo abaixo &#x1F603;:
 <a href="https://widget-form-nlw-return-qfeh0acd6-mateusfelixdias.vercel.app/">Widget-Form-Nlw-Return.</a>
 
 # Caso você queira o projeto em seu ambiente de desenvolvimento.
